@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from ultralytics import YOLO
 import cv2
 import numpy as np
-import time
 import os
 
 app = Flask(__name__)
@@ -23,3 +22,8 @@ def predict():
                 predictions.append({"class": cls, "confidence": round(conf, 2)})
 
     return jsonify({"results": predictions})
+
+# 🔥 Bloc indispensable pour Render
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
