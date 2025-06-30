@@ -1,4 +1,10 @@
 flask
-opencv-python-headless
-numpy
+flask-cors
 ultralytics
+opencv-python
+numpy
+
+# flask
+# opencv-python-headless
+# numpy
+# ultralytics
